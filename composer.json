@@ -14,6 +14,9 @@
         "kanopi/saplings-fields-header": "^2",
         "kanopi/saplings-fields-seo": "^1",
         "kanopi/saplings-media": "^1",
-        "kanopi/arbor-theme": "^1"
+        "kanopi/arbor-theme": "^1",
+        "kanopi/saplings_custom": "*",
+        "kanopi/saplings_paragraphs": "^1.0",
+        "kanopi/shrubs": "^0.2.15"
     }
 }
