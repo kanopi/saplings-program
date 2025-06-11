@@ -1,0 +1,19 @@
+{
+    "name": "kanopi/saplings-program",
+    "description": "Base configuration for Saplings Program content type.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Elena Chechulina",
+            "homepage": "https://kanopi.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "kanopi/saplings-fields-header": "^2",
+        "kanopi/saplings-fields-seo": "^1",
+        "kanopi/saplings-media": "^1",
+        "kanopi/arbor-theme": "^1"
+    }
+}
