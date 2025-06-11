@@ -1,0 +1,93 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_callout
+    - node.type.program
+    - paragraphs.paragraphs_type.callout
+  module:
+    - entity_reference_revisions
+id: node.program.field_callout
+field_name: field_callout
+entity_type: node
+bundle: program
+label: Callout
+description: ""
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ""
+settings:
+  handler: "default:paragraph"
+  handler_settings:
+    target_bundles:
+      callout: callout
+    negate: 0
+    target_bundles_drag_drop:
+      callout:
+        weight: 23
+        enabled: true
+      sa_accordion:
+        weight: 22
+        enabled: false
+      sa_accordion_item:
+        weight: 23
+        enabled: false
+      sa_block:
+        weight: 24
+        enabled: false
+      sa_card:
+        weight: 25
+        enabled: false
+      sa_carousel:
+        weight: 26
+        enabled: false
+      sa_carousel_item:
+        weight: 27
+        enabled: false
+      sa_columns:
+        weight: 28
+        enabled: false
+      sa_existing_content_card:
+        weight: 29
+        enabled: false
+      sa_faq:
+        weight: 30
+        enabled: false
+      sa_faq_item:
+        weight: 31
+        enabled: false
+      sa_feature:
+        weight: 32
+        enabled: false
+      sa_filtered_list:
+        weight: 33
+        enabled: false
+      sa_hero:
+        weight: 34
+        enabled: false
+      sa_media:
+        weight: 35
+        enabled: false
+      sa_media_collection:
+        weight: 36
+        enabled: false
+      sa_multi_item_carousel:
+        weight: 37
+        enabled: false
+      sa_side_by_side:
+        weight: 38
+        enabled: false
+      sa_stat:
+        weight: 39
+        enabled: false
+      sa_tab:
+        weight: 40
+        enabled: false
+      sa_tabs:
+        weight: 41
+        enabled: false
+      sa_text:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

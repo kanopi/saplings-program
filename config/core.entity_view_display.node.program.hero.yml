@@ -1,0 +1,217 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero
+    - field.field.node.program.field_body
+    - field.field.node.program.field_callout
+    - field.field.node.program.field_hero_cta
+    - field.field.node.program.sa_components
+    - field.field.node.program.sa_description
+    - field.field.node.program.sa_featured_media
+    - field.field.node.program.sa_header_position
+    - field.field.node.program.sa_hide_header
+    - field.field.node.program.sa_include_mute_button
+    - field.field.node.program.sa_include_pause_button
+    - field.field.node.program.sa_overlay
+    - field.field.node.program.sa_overlay_opacity
+    - field.field.node.program.sa_robots
+    - field.field.node.program.sa_seo_description
+    - field.field.node.program.sa_seo_image
+    - field.field.node.program.sa_seo_page_title
+    - node.type.program
+  module:
+    - ds
+    - element_class_formatter
+    - layout_builder
+    - link
+    - nomarkup
+    - sdc_display
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ""
+    mappings:
+      static:
+        props: {}
+        slots: {}
+      dynamic:
+        props: {}
+        slots: {}
+  ds:
+    layout:
+      id: "ui_patterns:arbor:hero"
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ""
+        ui_patterns:
+          component_id: "arbor:hero"
+          variant_id:
+            source_id: select
+            source:
+              value: page_hero
+          props:
+            attributes:
+              source_id: attributes
+              source:
+                value: ""
+            container:
+              source_id: select
+              source:
+                value: ""
+            margin:
+              source_id: select
+              source:
+                value: ""
+            padding:
+              source_id: select
+              source:
+                value: ""
+            width:
+              source_id: select
+              source:
+                value: ""
+            hide_header:
+              source_id: entity_field
+              source:
+                derivable_context: "field:node:program:sa_hide_header"
+                "field:node:program:sa_hide_header":
+                  value:
+                    source_id: "field_property:node:sa_hide_header:value"
+            justify:
+              source_id: entity_field
+              source:
+                derivable_context: "field:node:program:sa_header_position"
+                "field:node:program:sa_header_position":
+                  value:
+                    source_id: "field_property:node:sa_header_position:value"
+            include_mute_button:
+              source_id: entity_field
+              source:
+                derivable_context: "field:node:program:sa_include_mute_button"
+                "field:node:program:sa_include_mute_button":
+                  value:
+                    source_id: "field_property:node:sa_include_mute_button:value"
+            include_pause_button:
+              source_id: entity_field
+              source:
+                derivable_context: "field:node:program:sa_include_pause_button"
+                "field:node:program:sa_include_pause_button":
+                  value:
+                    source_id: "field_property:node:sa_include_pause_button:value"
+            overlay:
+              source_id: select
+              source:
+                value: ""
+            overlay_opacity:
+              source_id: select
+              source:
+                value: ""
+          slots: {}
+    regions:
+      heading:
+        - node_title
+      hero_background:
+        - sa_featured_media
+      content:
+        - sa_description
+        - field_hero_cta
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          "link class": ""
+          link_target: ""
+          wrapper: ""
+          class: ""
+        ft:
+          id: default
+          settings:
+            lb: ""
+            lb-col: false
+            classes: {}
+id: node.program.hero
+targetEntityType: node
+bundle: program
+mode: hero
+content:
+  field_hero_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ""
+      target: ""
+    third_party_settings: {}
+    weight: 3
+    region: content
+  sa_description:
+    type: wrapper_class
+    label: hidden
+    settings:
+      class: hero-description
+      tag: p
+      link: false
+      link_class: ""
+      summary: false
+      trim: 200
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: "|"
+        referenced_entity: ""
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  sa_featured_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: "|"
+        referenced_entity: "0"
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: hero_background
+hidden:
+  field_body: true
+  field_callout: true
+  links: true
+  published_at: true
+  sa_components: true
+  sa_header_position: true
+  sa_hide_header: true
+  sa_include_mute_button: true
+  sa_include_pause_button: true
+  sa_overlay: true
+  sa_overlay_opacity: true
+  sa_robots: true
+  sa_seo_description: true
+  sa_seo_image: true
+  sa_seo_page_title: true
+  search_api_excerpt: true

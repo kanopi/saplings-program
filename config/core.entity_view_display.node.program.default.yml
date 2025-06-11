@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.field_body
+    - field.field.node.program.field_callout
+    - field.field.node.program.field_hero_cta
+    - field.field.node.program.sa_components
+    - field.field.node.program.sa_description
+    - field.field.node.program.sa_featured_media
+    - field.field.node.program.sa_header_position
+    - field.field.node.program.sa_hide_header
+    - field.field.node.program.sa_include_mute_button
+    - field.field.node.program.sa_include_pause_button
+    - field.field.node.program.sa_overlay
+    - field.field.node.program.sa_overlay_opacity
+    - field.field.node.program.sa_robots
+    - field.field.node.program.sa_seo_description
+    - field.field.node.program.sa_seo_image
+    - field.field.node.program.sa_seo_page_title
+    - node.type.program
+  module:
+    - ds
+    - entity_reference_revisions
+    - nomarkup
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ""
+    mappings:
+      static:
+        props: {}
+        slots: {}
+      dynamic:
+        props: {}
+        slots: {}
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 1
+    region: content
+  field_callout:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ""
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: "|"
+        referenced_entity: ""
+      sdc_display:
+        enabled: "0"
+        component:
+          machine_name: ""
+          show_deprecated: "0"
+    weight: 0
+    region: content
+  links:
+    settings: {}
+    third_party_settings: {}
+    weight: 100
+    region: content
+  sa_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ""
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ""
+        referenced_entity: ""
+      ds:
+        ds_limit: ""
+        ft:
+          id: default
+          settings:
+            lb: ""
+            lb-col: false
+            classes: {}
+    weight: 2
+    region: content
+hidden:
+  field_hero_cta: true
+  published_at: true
+  sa_description: true
+  sa_featured_media: true
+  sa_header_position: true
+  sa_hide_header: true
+  sa_include_mute_button: true
+  sa_include_pause_button: true
+  sa_overlay: true
+  sa_overlay_opacity: true
+  sa_robots: true
+  sa_seo_description: true
+  sa_seo_image: true
+  sa_seo_page_title: true
+  search_api_excerpt: true

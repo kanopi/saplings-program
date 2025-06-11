@@ -1,0 +1,125 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.sa_components
+    - node.type.program
+    - paragraphs.paragraphs_type.acceptance_section
+    - paragraphs.paragraphs_type.pill_tab
+    - paragraphs.paragraphs_type.resource
+    - paragraphs.paragraphs_type.sa_accordion_item
+    - paragraphs.paragraphs_type.sa_card
+    - paragraphs.paragraphs_type.sa_carousel_item
+    - paragraphs.paragraphs_type.sa_existing_content_card
+    - paragraphs.paragraphs_type.sa_stat
+    - paragraphs.paragraphs_type.sa_tab
+    - paragraphs.paragraphs_type.video_card
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: K3BYDFSO6lnyjtdn0AU4yCTEJLT_NasFRtwTWAGZk4M
+id: node.program.sa_components
+field_name: sa_components
+entity_type: node
+bundle: program
+label: Components
+description: ""
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ""
+settings:
+  handler: "default:paragraph"
+  handler_settings:
+    target_bundles:
+      sa_accordion_item: sa_accordion_item
+      sa_card: sa_card
+      sa_carousel_item: sa_carousel_item
+      sa_existing_content_card: sa_existing_content_card
+      sa_tab: sa_tab
+      acceptance_section: acceptance_section
+      pill_tab: pill_tab
+      sa_stat: sa_stat
+      resource: resource
+      video_card: video_card
+    negate: 1
+    target_bundles_drag_drop:
+      acceptance_section:
+        weight: 26
+        enabled: true
+      callout:
+        weight: 23
+        enabled: false
+      pill_tab:
+        weight: 28
+        enabled: true
+      pill_tabs:
+        weight: 29
+        enabled: false
+      resource:
+        weight: 50
+        enabled: true
+      sa_accordion:
+        weight: 13
+        enabled: false
+      sa_accordion_item:
+        weight: 14
+        enabled: true
+      sa_block:
+        weight: 15
+        enabled: false
+      sa_card:
+        weight: 16
+        enabled: true
+      sa_carousel:
+        weight: 17
+        enabled: false
+      sa_carousel_item:
+        weight: 18
+        enabled: true
+      sa_columns:
+        weight: 23
+        enabled: false
+      sa_existing_content_card:
+        weight: 18
+        enabled: true
+      sa_feature:
+        weight: 34
+        enabled: false
+      sa_filtered_list:
+        weight: 19
+        enabled: false
+      sa_hero:
+        weight: 32
+        enabled: false
+      sa_media:
+        weight: 20
+        enabled: false
+      sa_media_collection:
+        weight: 34
+        enabled: false
+      sa_multi_item_carousel:
+        weight: 35
+        enabled: false
+      sa_side_by_side:
+        weight: 21
+        enabled: false
+      sa_stat:
+        weight: 29
+        enabled: true
+      sa_tab:
+        weight: 22
+        enabled: true
+      sa_tabs:
+        weight: 23
+        enabled: false
+      sa_text:
+        weight: 24
+        enabled: false
+      testimonial:
+        weight: 49
+        enabled: false
+      video_card:
+        weight: 52
+        enabled: true
+field_type: entity_reference_revisions

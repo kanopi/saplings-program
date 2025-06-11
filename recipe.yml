@@ -1,0 +1,40 @@
+name: "Saplings - Program Content Type"
+description: "Provides the Program content type with all fields, display config, and SEO settings."
+type: "Site"
+
+recipes:
+  - saplings-content-base
+
+install:
+  - node
+  - metatag
+  - schema_metatag
+
+config:
+  import:
+    node:
+      - node.type.program
+    core.base_field_override.node.program.promote: "*"
+    core.base_field_override.node.program.status: "*"
+    core.entity_form_display.node.program.default: "*"
+    core.entity_view_display.node.program.default: "*"
+    core.entity_view_display.node.program.hero: "*"
+    core.entity_view_display.node.program.teaser: "*"
+    field.field.node.program.field_body: "*"
+    field.field.node.program.field_callout: "*"
+    field.field.node.program.field_hero_cta: "*"
+    field.field.node.program.sa_components: "*"
+    field.field.node.program.sa_description: "*"
+    field.field.node.program.sa_featured_media: "*"
+    field.field.node.program.sa_header_position: "*"
+    field.field.node.program.sa_hide_header: "*"
+    field.field.node.program.sa_include_mute_button: "*"
+    field.field.node.program.sa_include_pause_button: "*"
+    field.field.node.program.sa_overlay_opacity: "*"
+    field.field.node.program.sa_overlay: "*"
+    field.field.node.program.sa_robots: "*"
+    field.field.node.program.sa_seo_description: "*"
+    field.field.node.program.sa_seo_image: "*"
+    field.field.node.program.sa_seo_page_title: "*"
+    metatag:
+      - metatag.metatag_defaults.node__program

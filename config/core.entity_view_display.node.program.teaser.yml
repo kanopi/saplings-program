@@ -1,0 +1,176 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_body
+    - field.field.node.program.field_callout
+    - field.field.node.program.field_hero_cta
+    - field.field.node.program.sa_components
+    - field.field.node.program.sa_description
+    - field.field.node.program.sa_featured_media
+    - field.field.node.program.sa_header_position
+    - field.field.node.program.sa_hide_header
+    - field.field.node.program.sa_include_mute_button
+    - field.field.node.program.sa_include_pause_button
+    - field.field.node.program.sa_overlay
+    - field.field.node.program.sa_overlay_opacity
+    - field.field.node.program.sa_robots
+    - field.field.node.program.sa_seo_description
+    - field.field.node.program.sa_seo_image
+    - field.field.node.program.sa_seo_page_title
+    - node.type.program
+  module:
+    - ds
+    - layout_builder
+    - nomarkup
+    - sdc_display
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ""
+    mappings:
+      static:
+        props: {}
+        slots: {}
+      dynamic:
+        props: {}
+        slots: {}
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: "ui_patterns:arbor:card"
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ""
+        ui_patterns:
+          component_id: "arbor:card"
+          variant_id:
+            source_id: select
+            source:
+              value: ""
+          props:
+            attributes:
+              source_id: attributes
+              source:
+                value: ""
+            margin:
+              source_id: select
+              source:
+                value: ""
+            image_position:
+              source_id: select
+              source:
+                value: ""
+            h_100:
+              source_id: checkbox
+              source:
+                value: 0
+            header_attributes:
+              source_id: attributes
+              source:
+                value: ""
+            footer_attributes:
+              source_id: attributes
+              source:
+                value: ""
+            row_attributes:
+              source_id: attributes
+              source:
+                value: 'class="g-0"'
+            image_col_attributes:
+              source_id: attributes
+              source:
+                value: 'class="col-md-4"'
+            content_col_attributes:
+              source_id: attributes
+              source:
+                value: 'class="col-md-8"'
+            image_col_classes:
+              source_id: textfield
+              source:
+                value: ""
+            content_col_classes:
+              source_id: textfield
+              source:
+                value: ""
+          slots: {}
+    regions:
+      image:
+        - sa_featured_media
+      header:
+        - node_title
+      content:
+        - sa_description
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          "link class": "h5 stretched-link"
+          link_target: ""
+          wrapper: ""
+          class: ""
+        ft:
+          id: default
+          settings:
+            lb: ""
+            lb-col: false
+            classes: {}
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  sa_description:
+    type: basic_string
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 2
+    region: content
+  sa_featured_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: wide_3_2
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: "|"
+        referenced_entity: "0"
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: image
+hidden:
+  field_body: true
+  field_callout: true
+  field_hero_cta: true
+  links: true
+  published_at: true
+  sa_components: true
+  sa_header_position: true
+  sa_hide_header: true
+  sa_include_mute_button: true
+  sa_include_pause_button: true
+  sa_overlay: true
+  sa_overlay_opacity: true
+  sa_robots: true
+  sa_seo_description: true
+  sa_seo_image: true
+  sa_seo_page_title: true
+  search_api_excerpt: true
