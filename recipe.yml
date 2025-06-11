@@ -3,7 +3,9 @@ description: "Provides the Program content type with all fields, display config,
 type: "Site"
 
 recipes:
+  - core/recipes/content_editor_role
   - saplings-content-base
+  - saplings-component-types
 
 install:
   - node
@@ -20,9 +22,9 @@ config:
     core.entity_view_display.node.program.default: "*"
     core.entity_view_display.node.program.hero: "*"
     core.entity_view_display.node.program.teaser: "*"
-    field.field.node.program.field_body: "*"
-    field.field.node.program.field_callout: "*"
-    field.field.node.program.field_hero_cta: "*"
+    field.field.node.program.sa_body: "*"
+    field.field.node.program.sa_callout: "*"
+    field.field.node.program.sa_hero_cta: "*"
     field.field.node.program.sa_components: "*"
     field.field.node.program.sa_description: "*"
     field.field.node.program.sa_featured_media: "*"

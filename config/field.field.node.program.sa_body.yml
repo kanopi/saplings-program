@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_body
+    - field.storage.node.sa_body
     - filter.format.full_html
     - node.type.program
   module:
     - text
-id: node.program.field_body
+id: node.program.sa_body
 field_name: field_body
 entity_type: node
 bundle: program

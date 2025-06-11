@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.program.field_body
-    - field.field.node.program.field_callout
-    - field.field.node.program.field_hero_cta
+    - field.field.node.program.sa_body
+    - field.field.node.program.sa_callout
+    - field.field.node.program.sa_hero_cta
     - field.field.node.program.sa_components
     - field.field.node.program.sa_description
     - field.field.node.program.sa_featured_media

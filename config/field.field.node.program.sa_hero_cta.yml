@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hero_cta
+    - field.storage.node.sa_hero_cta
     - node.type.program
   module:
     - link
-id: node.program.field_hero_cta
+id: node.program.sa_hero_cta
 field_name: field_hero_cta
 entity_type: node
 bundle: program
