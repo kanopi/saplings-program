@@ -17,6 +17,5 @@
         "kanopi/arbor-theme": "^1",
         "kanopi/saplings_custom": "*",
         "kanopi/saplings_paragraphs": "^1.0",
-        "kanopi/shrubs": "^0.2.15"
     }
 }
