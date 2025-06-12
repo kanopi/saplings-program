@@ -43,14 +43,14 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
-  field_body:
+  sa_body:
     type: text_default
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 1
     region: content
-  field_callout:
+  sa_callout:
     type: entity_reference_revisions_entity_view
     label: hidden
     settings:
@@ -95,7 +95,7 @@ content:
     weight: 2
     region: content
 hidden:
-  field_hero_cta: true
+  sa_hero_cta: true
   published_at: true
   sa_description: true
   sa_featured_media: true

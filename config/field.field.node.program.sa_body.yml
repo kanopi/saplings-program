@@ -8,7 +8,7 @@ dependencies:
   module:
     - text
 id: node.program.sa_body
-field_name: field_body
+field_name: sa_body
 entity_type: node
 bundle: program
 label: Body

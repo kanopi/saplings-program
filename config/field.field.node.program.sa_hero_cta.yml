@@ -7,7 +7,7 @@ dependencies:
   module:
     - link
 id: node.program.sa_hero_cta
-field_name: field_hero_cta
+field_name: sa_hero_cta
 entity_type: node
 bundle: program
 label: "Hero CTA"

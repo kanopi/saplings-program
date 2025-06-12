@@ -157,9 +157,9 @@ content:
     weight: 0
     region: image
 hidden:
-  field_body: true
-  field_callout: true
-  field_hero_cta: true
+  sa_body: true
+  sa_callout: true
+  sa_hero_cta: true
   links: true
   published_at: true
   sa_components: true

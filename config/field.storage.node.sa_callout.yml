@@ -6,7 +6,7 @@ dependencies:
     - node
     - paragraphs
 id: node.sa_callout
-field_name: field_callout
+field_name: sa_callout
 entity_type: node
 type: entity_reference_revisions
 settings:
