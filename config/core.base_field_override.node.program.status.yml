@@ -3,9 +3,6 @@ status: true
 dependencies:
   config:
     - node.type.program
-_core:
-  default_config_hash: LYu5qlukt7K22Cy51Qt6SSs1OVA8kkCWg17WFCL1Q94
-id: node.program.status
 field_name: status
 entity_type: node
 bundle: program
