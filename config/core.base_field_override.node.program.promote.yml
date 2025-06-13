@@ -3,9 +3,6 @@ status: true
 dependencies:
   config:
     - node.type.program
-_core:
-  default_config_hash: P1_GW4MIzxQgr2RuBpedscCYv6iIqkZSHkb9lB8sPoQ
-id: node.program.promote
 field_name: promote
 entity_type: node
 bundle: program

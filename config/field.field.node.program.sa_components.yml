@@ -16,9 +16,6 @@ dependencies:
     - paragraphs.paragraphs_type.video_card
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: K3BYDFSO6lnyjtdn0AU4yCTEJLT_NasFRtwTWAGZk4M
-id: node.program.sa_components
 field_name: sa_components
 entity_type: node
 bundle: program

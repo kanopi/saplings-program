@@ -22,9 +22,6 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-_core:
-  default_config_hash: G5sF91y0s59U98Ed4rABMrhk-8ItaRkFoMngBCuk7A8
-name: "Program"
 type: program
 description: ""
 help: null
